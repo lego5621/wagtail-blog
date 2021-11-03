@@ -1,0 +1,107 @@
+
+
+/* Стили с блога */
+
+.quicksand {
+    font-family: "Nunito", sans-serif;
+}
+
+::selection {
+    background: #e9d8fd;
+    color: #202684;
+}
+
+::-moz-selection {
+    background: #e9d8fd;
+    color: #202684;
+    /* Gecko Browsers */
+}
+
+/* a:not(.nav, .tags) {
+    text-decoration: none;
+    margin-right: 4px;
+    padding: 2px;
+    background-repeat: repeat-x;
+    background-size: 100% 1px;
+    background-position: 0 95%;
+    -webkit-transition: all 150ms ease-in-out;
+    -moz-transition: all 150ms ease-in-out;
+    -ms-transition: all 150ms ease-in-out;
+    -o-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+} */
+
+.tags{
+    color: #5a67d8;
+}
+
+li:not(.navLi){
+    list-style-type: disc;
+    list-style-position:inside;
+    /* margin-left: 10px; */
+}
+
+  
+
+/* pre{
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 2px 5px;
+} */
+
+
+pre , img{
+    border-radius: 15px !important;
+    font-size: 0.9rem;
+}
+
+pre {
+    width: 45vw !important;
+    max-width: 800px !important;  
+    padding: 5px;
+}
+
+pre, p img{
+    width: 45vw !important;
+    max-width: 800px !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+@media (max-width: 767px) {
+    pre, p img{
+        width: 100% !important;
+        min-width: 100% !important;
+    }
+
+    pre {
+        width: 100% !important;
+    }
+  }
+
+a:hover {
+    /* color: #b794f4; */
+    color: #5a67d8;
+    /* font-weight: bold; */
+    text-decoration: none;
+    /* background: linear-gradient(to right, #5a67d8, #5a67d8); */
+    background-repeat: repeat-x;
+    background-size: 100% 1px;
+    background-position: 50% 95%;
+    -webkit-transition: color 150ms ease-in-out;
+    -moz-transition: color 150ms ease-in-out;
+    -ms-transition: color 150ms ease-in-out;
+    -o-transition: color 150ms ease-in-out;
+    transition: color 150ms ease-in-out;
+}
+
+
+/* Стили поста */
+
+.post-text h2{
+    font-size: 1.2rem !important;
+    font-weight: bold;
+    margin-top: 0.5rem;
+
+}

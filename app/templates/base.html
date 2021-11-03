@@ -1,0 +1,90 @@
+{% load  static wagtailcore_tags base_tags wagtailuserbar  %}
+
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+        <title>
+            {% block title %}
+                {% if page.seo_title %}{{ page.seo_title }}{% else %}{{ page.title }}{% endif %}
+            {% endblock %}
+            {% block title_suffix %}
+                {% wagtail_site as current_site %}
+                {% if current_site and current_site.site_name %}- {{ current_site.site_name }}{% endif %}
+            {% endblock %}
+        </title>
+		<meta name="description" content="{{ self.search_description }}" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/app1.css' %}">
+		<link href={% static 'css/prism2.css' %}  rel="stylesheet" />
+
+        {% block extra_css %}
+            {# Override this in templates to add extra stylesheets #}
+        {% endblock %}
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/tailwindcss/dist/tailwind.min.css"
+		/>
+	</head>
+	<body class="font-sans quicksand text-gray-300 bg-gray-900">
+		<div class="p-6 sm:p-10 md:p-16 flex flex-wrap">
+
+			<div class="w-full md:w-1/2 md:pr-32 order-3 md:order-1">
+				<div
+					class="
+						max-w-md
+						md:float-right md:text-right
+						leading-loose
+						tracking-tight
+						md:sticky md:top-0
+					"
+				>
+					<p class="font-bold my-4 md:my-12">Последние посты</p>
+
+					{% block lastPost %}
+
+					{% endblock %}
+
+					<div
+						class="
+							max-w-md
+							md:float-right md:text-right
+							leading-loose
+							tracking-tight
+							md:mb-16
+						"
+					>
+						<p class="font-bold my-4 mb-2 md:mt-12">На <a href="/" class="tags">Главную</a> или Теги</p>
+
+						{% block allTags %}
+
+						{% endblock %}
+					</div>
+				</div>
+			</div>
+			<div class="w-full md:w-1/2 order-1 md:order-2">
+				<div class="max-w-md leading-loose tracking-tight">
+					{% block content %}
+
+					{% endblock %}
+
+					{% block pagination %}
+
+					{% endblock %}
+				</div>
+				<div class="w-full order-2">
+					<div class="max-w-xl leading-loose tracking-tight">
+						<p class="font-bold my-4 mb-2 md:mt-12">О себе</p>
+						{% footer_tag %}
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+		// Prism.hooks.add('before-sanity-check', function (env) {
+		// 	env.element.innerHTML = env.element.innerHTML.replace(/<br>/g, '\n');
+		// 	env.code = env.element.textContent;
+		// });
+		</script>
+
+	</body>
+</html>
