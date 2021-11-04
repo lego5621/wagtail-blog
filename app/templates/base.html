@@ -14,8 +14,10 @@
         </title>
 		<meta name="description" content="{{ self.search_description }}" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" type="text/css" href="{% static 'css/app1.css' %}">
-		<link href={% static 'css/prism2.css' %}  rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/app4.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/prism5.css' %}">
+
+
 
         {% block extra_css %}
             {# Override this in templates to add extra stylesheets #}
@@ -38,11 +40,15 @@
 						md:sticky md:top-0
 					"
 				>
-					<p class="font-bold my-4 md:my-12">Последние посты</p>
+					
+					<div class="last-Post">
+						<p class="font-bold my-4 md:my-12">Последние посты</p>
+						{% block lastPost %}
 
-					{% block lastPost %}
+						{% endblock %}
+					</div>
 
-					{% endblock %}
+				
 
 					<div
 						class="
@@ -62,7 +68,7 @@
 				</div>
 			</div>
 			<div class="w-full md:w-1/2 order-1 md:order-2">
-				<div class="max-w-md leading-loose tracking-tight">
+				<div class="blok-content leading-loose tracking-tight">
 					{% block content %}
 
 					{% endblock %}
@@ -78,13 +84,12 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div>	
 		<script>
 		// Prism.hooks.add('before-sanity-check', function (env) {
 		// 	env.element.innerHTML = env.element.innerHTML.replace(/<br>/g, '\n');
 		// 	env.code = env.element.textContent;
 		// });
 		</script>
-
 	</body>
 </html>

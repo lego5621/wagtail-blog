@@ -2,13 +2,14 @@ from django.db import models
 
 from wagtail.core.models import Page
 from wagtail.core.fields import RichTextField, StreamField
+from wagtail.images.blocks import ImageChooserBlock
 from wagtail.admin.edit_handlers import FieldPanel, StreamFieldPanel
 from wagtail.core import blocks
 from modelcluster.fields import ParentalKey
 from modelcluster.contrib.taggit import ClusterTaggableManager
 from taggit.models import TaggedItemBase
 from taggit.models import Tag
-from wagtailcodeblock.blocks import CodeBlock
+from wagtailcodeblocknocss.blocks import CodeBlock
 
 from wagtail.snippets.models import register_snippet
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
@@ -68,7 +69,8 @@ class BlogPage(Page):
     body = StreamField([
         ('heading', blocks.CharBlock(form_classname="full title")),
         ('paragraph', blocks.RichTextBlock()),
-        ('code' , CodeBlock(label='Code'))
+        ('code' , CodeBlock(label='Code')),
+        ('image', ImageChooserBlock()),
     ])
 
     content_panels = Page.content_panels + [

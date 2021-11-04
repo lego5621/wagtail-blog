@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'wagtail.search',
     'wagtail.admin',
     'wagtail.core',
-    'wagtailcodeblock',
+    
+    'wagtailcodeblocknocss',
 
     'modelcluster',
     'taggit',
@@ -166,4 +167,3 @@ BASE_URL = 'http://example.com'
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 WAGTAIL_CODE_BLOCK_LINE_NUMBERS = False
-
