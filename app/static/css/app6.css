@@ -3,8 +3,8 @@
 /* Стили с блога */
 
 .block-heading{ 
-    font-size: 1.5em;
-    margin-top: 1.25em;
+    /* font-size: 1.5em; */
+    margin-top: 30px;
     margin-bottom: .25em;
     font-weight:bold
 }

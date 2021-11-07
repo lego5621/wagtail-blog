@@ -2,7 +2,8 @@ from django.db import models
 
 from wagtail.core.models import Page
 from wagtail.core.fields import RichTextField, StreamField
-from wagtail.images.blocks import ImageChooserBlock
+from wagtail.core.blocks import BlockQuoteBlock
+from wagtail.embeds.blocks import EmbedBlock
 from wagtail.admin.edit_handlers import FieldPanel, StreamFieldPanel
 from wagtail.core import blocks
 from modelcluster.fields import ParentalKey
@@ -70,7 +71,9 @@ class BlogPage(Page):
         ('heading', blocks.CharBlock(form_classname="full title")),
         ('paragraph', blocks.RichTextBlock()),
         ('code' , CodeBlock(label='Code')),
-        ('image', ImageChooserBlock()),
+        ('quote', BlockQuoteBlock()),
+        ('embed', EmbedBlock()),
+
     ])
 
     content_panels = Page.content_panels + [

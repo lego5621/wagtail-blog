@@ -7,28 +7,28 @@
 
  code[class*='language-'],
  pre[class*='language-'] {
-     color: #9efeff;
-     direction: ltr;
-     text-align: left;
-     white-space: pre;
-     word-spacing: normal;
-     word-break: normal;
- 
-     -moz-tab-size: 4;
-     -o-tab-size: 4;
-     tab-size: 4;
- 
-     -webkit-hyphens: none;
-     -moz-hyphens: none;
-     -ms-hyphens: none;
-     hyphens: none;
- 
-     font-family: 'Operator Mono', 'Fira Code', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-     font-weight: 400;
-     font-size: 17px;
-     line-height: 25px;
-     letter-spacing: 0.5px;
-     text-shadow: 0 1px #222245;
+    color: #9efeff;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+
+    font-family: 'Operator Mono', 'Fira Code', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px #222245;
  }
  
  pre[class*='language-']::-moz-selection,

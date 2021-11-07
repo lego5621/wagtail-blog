@@ -1,13 +1,33 @@
 <!DOCTYPE html>
-<html class="no-js">
-    <head>
-        <meta charset="utf-8" />
-        <title>Internal server error</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-    </head>
-    <body>
-        <h1>Internal server error</h1>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>500</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tailwindcss/dist/tailwind.min.css"
+    />
+    <style>
+        .error-text {
+          font-size: 130px;
+        }
+    
+        @media (min-width: 768px) {
+          .error-text {
+            font-size: 220px;
+          }
+        }
+    
+    </style>
+</head>
+<body>
+  
+  <div class="h-screen w-screen bg-gray-900 flex justify-center content-center flex-wrap">
+    <p class="font-sans text-white error-text">500</p>
+  </div>
 
-        <h2>Sorry, there seems to be an error. Please try again soon.</h2>
-    </body>
+    
+</body>
 </html>
