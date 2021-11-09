@@ -68,18 +68,17 @@ class BlogPage(Page):
     parent_page_types = ['HomePage']
 
     body = StreamField([
-        ('heading', blocks.CharBlock(form_classname="full title")),
-        ('paragraph', blocks.RichTextBlock()),
-        ('code' , CodeBlock(label='Code')),
-        ('quote', BlockQuoteBlock()),
-        ('embed', EmbedBlock()),
-
+        ('heading', blocks.CharBlock(form_classname="full title", label='Заголовок')),
+        ('paragraph', blocks.RichTextBlock(label='Текст')),
+        ('code' , CodeBlock(label='Код')),
+        ('quote', BlockQuoteBlock(label='Цитата')),
+        ('embed', EmbedBlock(label='Видео')),
     ])
 
     content_panels = Page.content_panels + [
-        FieldPanel('date'),
-        StreamFieldPanel('body'),
-        FieldPanel('tags')
+        FieldPanel('date', heading = 'Дата' ),
+        StreamFieldPanel('body',heading = 'Тело статьи'),
+        FieldPanel('tags', heading = 'Теги')
     ]
 
     def get_context(self, request):
